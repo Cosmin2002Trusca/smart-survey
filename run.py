@@ -12,8 +12,16 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('smart_survey')
 
-survey = SHEET.worksheet('survey')
 
-data = survey.get_all_values()
+def get_name_data():
+    """
+    Get name from survey subjects
+    """
+    print("Please enter your full name")
+    print("Example: Jack Johnson\n")
 
-print(data)
+    data_name = input("Enter your full name here: ")
+    print(f"The name provided is {data_name}")
+
+
+get_name_data()
