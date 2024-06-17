@@ -83,6 +83,22 @@ def update_survey_worksheet(data):
     survey_worksheet.append_row(data_row)
     print("Survey worksheet updated successfully\n")
 
+     # Retrieve all responses
+    all_responses = survey_worksheet.get_all_values()[1:]  # Exclude header row
+    total_responses = len(all_responses)
+
+    percentages = {}
+    for i, question in enumerate(answers.keys(), start=1):
+        matching_responses = sum(1 for response in all_responses if response[i].lower() == answers[question])
+        percentages[question] = (matching_responses / total_responses) * 100 if total_responses > 0 else 0
+
+    # Display the percentages
+    print("Percentage of people who answered like you for each question:")
+    for question, percentage in percentages.items():
+        print(f"{question}: {percentage:.2f}%")
+
+
+
 # Main function to run the survey
 if __name__ == "__main__":
     data = get_survey_data()
