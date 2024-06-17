@@ -2,19 +2,20 @@ import gspread
 from google.oauth2.service_account import Credentials
 import re
 
+# Define the scope and credentials
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
-    ]
+]
 
+# Load the credentials
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('smart_survey')
 
-
-
+# Define the validation functions
 def is_valid_name(name):
     """
     Validates that the name is properly formatted.
@@ -68,6 +69,21 @@ def get_survey_data():
 
     return data_name, answers
 
+def update_survey_worksheet(data):
+    """
+    Update survey worksheet
+    """
+    print("Updating survey worksheet...\n")
+    survey_worksheet = SHEET.worksheet("survey")
+    
+    # Convert data to a list format suitable for appending
+    name, answers = data
+    data_row = [name] + list(answers.values())
+    
+    survey_worksheet.append_row(data_row)
+    print("Survey worksheet updated successfully\n")
 
-get_survey_data()
-
+# Main function to run the survey
+if __name__ == "__main__":
+    data = get_survey_data()
+    update_survey_worksheet(data)
