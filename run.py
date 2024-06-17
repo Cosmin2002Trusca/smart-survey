@@ -37,7 +37,7 @@ def get_survey_data():
     print("Example: Jack Johnson\n")
 
     while True:
-        data_name = input("Enter your full name here: ")
+        data_name = input("Enter your full name here: \n")
         if is_valid_name(data_name):
             print(f"The name provided is {data_name}\n")
             break
@@ -59,7 +59,7 @@ def get_survey_data():
     print("Please answer with 'yes' or 'no' to the following questions.")
     for question in questions:
         while True:
-            answer = input(f"{question}: ")
+            answer = input(f"{question}: \n")
             if is_valid_answer(answer):
                 print(f"Your answer is {answer}\n")
                 answers[question] = answer.lower()
