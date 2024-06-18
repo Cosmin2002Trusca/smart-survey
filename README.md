@@ -42,3 +42,14 @@ This website is ideal for researchers, educators, and organizations seeking to g
 
 ![Update worksheet and show statistics screenshot](images/update-worksheet-and-show-statistics-screenshot.png)
 
+## Deployment
+
+- _The site was deployed to heroku. the steps to deploy are as follows:_
+    - Firs you need to create a new app on horoku
+    - After that you need to go to the settings of your app and add 2 config vars:
+        - Key: PORT and Value: 8000
+        - Key: CREDS and Value: copy of the "creds.json" file
+    - After adding the config vars you will add 2 buildpacks: python and nodejs
+    - Then you go to deployment and choose to deploy from GitHub
+    - At the and you will only need to click the deploy button
+
