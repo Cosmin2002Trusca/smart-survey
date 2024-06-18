@@ -28,3 +28,17 @@ This website is ideal for researchers, educators, and organizations seeking to g
 
     - The update_survey_worksheet function appends new responses to the Google Sheets worksheet and calculates the percentage of similar answers. This feature provides users with immediate feedback on how their responses compare with others, adding an interactive and informative element to the survey process.
 
+### How does the app work ?
+
+- _First, you need to enter your name._
+
+![Enter name screenshot](images/enter-your-name-screenshot.png)
+
+- _After that you will need to answer the questions._
+
+![Answer questions screenshot](images/answer-questions-screenshot.png)
+
+- _At the end, the worksheet will get updated and you will be shown the statistics of the ansers from other participants_
+
+![Update worksheet and show statistics screenshot](images/update-worksheet-and-show-statistics-screenshot.png)
+
