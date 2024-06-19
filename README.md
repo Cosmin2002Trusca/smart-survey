@@ -53,3 +53,6 @@ This website is ideal for researchers, educators, and organizations seeking to g
     - Then you go to deployment and choose to deploy from GitHub
     - At the and you will only need to click the deploy button
 
+## Credits
+
+This project draws inspiration and technical guidance from the "Love Sandwiches" project. The methodologies and techniques utilized in connecting to Google Sheets, managing OAuth credentials, and validating user inputs have been adapted and refined based on the foundational work established by the Love Sandwiches project.
