@@ -39,14 +39,14 @@ def get_survey_data():
     while True:
         print("Please enter your full name.")
         print("Example: Jack Johnson\n")
-        
+
         data_name = input("Enter your full name here: \n")
         if not is_valid_name(data_name):
             print("Invalid name format. Please enter your full name (first and last name).")
             continue
-        
+
         print(f"The name provided is {data_name}\n")
-        
+
         questions = [
             "Do you plan to attend college after graduating from high school?",
             "Are you interested in pursuing a career in STEM?",
@@ -56,9 +56,9 @@ def get_survey_data():
             "Are you interested in studying or working abroad?",
             "Do you see yourself working in the same field throughout your career?"
         ]
-    
+
         answers = {}
-    
+
         print("Please answer with 'yes' or 'no' to the following questions.")
         for question in questions:
             while True:
@@ -69,19 +69,19 @@ def get_survey_data():
                     break
                 else:
                     print("Invalid answer. Please respond with 'yes' or 'no'.")
-    
+
         update_survey_worksheet((data_name, answers))
-    
+
         while True:
             restart_survey = input("Do you want to start over the survey? (yes/no): ").lower()
             if restart_survey in ["yes", "no"]:
                 break
             else:
                 print("Invalid input. Please respond with 'yes' or 'no'.")
-    
+
         if restart_survey == "no":
             break
-    
+
     print("Thank you for participating in the survey!")
 
 
