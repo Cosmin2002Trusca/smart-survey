@@ -4,6 +4,8 @@ This survey application is designed to seamlessly collect and process user respo
 
 Once the data is collected, the application updates a Google Sheets worksheet with the new responses. It then calculates and displays the percentage of participants who answered similarly to the current respondent for each question, providing immediate feedback on how their answers compare with those of others. This functionality not only facilitates data collection but also offers valuable insights into common trends and opinions among the survey participants.
 
+The example questions are designed to explore the aspirations, preparedness, and ambitions of high school students as they look toward their future. By asking whether students plan to attend college or pursue careers in STEM, we gain insight into their educational and professional goals. Questions about their preparedness for the job market and interest in entrepreneurship reveal their confidence and potential for innovation. Evaluating their perception of their high school education's adequacy provides a measure of how well they feel supported in achieving their goals. Inquiring about studying or working abroad indicates their openness to global opportunities, while asking about their career longevity in a single field helps understand their expectations for professional stability and growth. Together, these questions offer a comprehensive view of how high school students envision their future paths.
+
 ![Responsive Mockup](images/all-devices-black.png)
 
 ## Features

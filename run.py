@@ -49,12 +49,12 @@ def get_survey_data():
 
     questions = [
         "Do you plan to attend college after graduating from high school?",
-        "Are you interested in pursuing a career in STEM (Science, Technology, Engineering, and Mathematics)?",
-        "Do you feel prepared for the challenges you might face in the future job market?",
-        "Are you considering starting your own business at some point in your career?",
-        "Do you believe that your high school education has adequately prepared you for your future career goals?",
-        "Are you interested in studying or working abroad in the future?",
-        "Do you see yourself working in the same field for the entirety of your career?"
+        "Are you interested in pursuing a career in STEM?",
+        "Do you feel prepared for future job market challenges?",
+        "Are you considering starting your own business?",
+        "Do you believe your high school education prepared you for your career goals?",
+        "Are you interested in studying or working abroad?",
+        "Do you see yourself working in the same field throughout your career?"
     ]
 
     answers = {}
