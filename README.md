@@ -42,6 +42,14 @@ This website is ideal for researchers, educators, and organizations seeking to g
 
 ![Update worksheet and show statistics screenshot](images/update-worksheet-and-show-statistics-screenshot.png)
 
+## Testing
+
+To ensure the survey application functions correctly, I conducted comprehensive testing that included configuration verification, input validation, and data handling. The Google API credentials were confirmed to be correctly set up, and access to the appropriate Google Sheets document and worksheet was verified. Validation functions for names and answers were tested with various valid and invalid inputs to ensure robustness. Simulated user interactions confirmed accurate data collection and entry into the worksheet. Percentage calculations were manually cross-checked with sheet data to ensure accuracy. The script was also tested for error handling and resilience, ensuring it provided clear feedback and handled invalid inputs gracefully. Finally, end-to-end testing with multiple user entries confirmed the application's seamless and reliable performance.
+
+### Validator Testing
+
+No errors were returned when passing through the official [CI Python Linter](https://pep8ci.herokuapp.com/)
+
 ## Deployment
 
 - _The site was deployed to heroku. the steps to deploy are as follows:_

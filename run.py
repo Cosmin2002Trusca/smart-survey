@@ -48,13 +48,13 @@ def get_survey_data():
             print("Invalid name format. Please enter your full name (first and last name).")
 
     questions = [
-        "Do you have a hidden talent?",
-        "Have you ever written a song for someone?",
-        "Do you believe in extraterrestrial life?",
-        "Do you believe in ghosts?",
-        "Do you believe in God?",
-        "Have you tried any extreme sports?",
-        "Have you participated in a quiz game or competition?"
+        "Do you plan to attend college after graduating from high school?",
+        "Are you interested in pursuing a career in STEM (Science, Technology, Engineering, and Mathematics)?",
+        "Do you feel prepared for the challenges you might face in the future job market?",
+        "Are you considering starting your own business at some point in your career?",
+        "Do you believe that your high school education has adequately prepared you for your future career goals?",
+        "Are you interested in studying or working abroad in the future?",
+        "Do you see yourself working in the same field for the entirety of your career?"
     ]
 
     answers = {}
