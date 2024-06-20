@@ -15,6 +15,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('smart_survey')
 
+
 # Define the validation functions
 def is_valid_name(name):
     """
@@ -23,11 +24,13 @@ def is_valid_name(name):
     """
     return bool(re.match(r"^[A-Za-z]+ [A-Za-z]+$", name))
 
+
 def is_valid_answer(answer):
     """
     Validates that the answer is either 'yes' or 'no'.
     """
     return answer.lower() in ["yes", "no"]
+
 
 def get_survey_data():
     """
@@ -69,21 +72,22 @@ def get_survey_data():
 
     return data_name, answers
 
+
 def update_survey_worksheet(data):
     """
     Update survey worksheet
     """
     print("Updating survey worksheet...\n")
     survey_worksheet = SHEET.worksheet("survey")
-    
+
     # Convert data to a list format suitable for appending
     name, answers = data
     data_row = [name] + list(answers.values())
-    
+
     survey_worksheet.append_row(data_row)
     print("Survey worksheet updated successfully\n")
 
-     # Retrieve all responses
+    # Retrieve all responses
     all_responses = survey_worksheet.get_all_values()[1:]  # Exclude header row
     total_responses = len(all_responses)
 
@@ -96,7 +100,6 @@ def update_survey_worksheet(data):
     print("Percentage of people who answered like you for each question:")
     for question, percentage in percentages.items():
         print(f"{question}: {percentage:.2f}%")
-
 
 
 # Main function to run the survey
